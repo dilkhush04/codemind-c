@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,j,rev=0,rem,temp,max,min;
+    scanf("%d",&n);
+    for(i=0;i<n*n;i++)
+    {
+        rev=0;
+        temp=i;
+        while(temp!=0)
+        {
+            rem=temp%10;
+            rev=rev*10+rem;
+            temp=temp/10;
+        }
+        if(i==rev)
+        {
+            if(i<n)
+            {
+                min=i;
+            }
+            if(i>n)
+            {
+                max=i;
+                break;
+            }
+        }
+    }
+    if((n-min)==(max-n))
+    {
+        printf("%d %d",min,max);
+    }
+    else
+    if((n-min)<(max-n))
+    {
+        printf("%d",min);
+    }
+    else
+    {
+         printf("%d",max);
+    }
+}
