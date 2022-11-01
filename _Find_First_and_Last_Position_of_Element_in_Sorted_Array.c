@@ -6,7 +6,7 @@ void findFirstAndLast(int arr[], int n, int x)
         if (x != arr[i])
             continue;
         if (first == -1)
-            first = i;
+           { first = i;}
         last = i;
     }
     if (first != -1)
