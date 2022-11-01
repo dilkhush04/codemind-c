@@ -4,12 +4,9 @@ int main()
      int n,a[10],i,j,found=0,min=9999;
      scanf("%d",&n);
      for(i=0;i<n;i++)
-     scanf("%d",&a[i]);
-     for(i=0;i<n;i++)
-     {if(min>a[i])
-     min=a[i];
-          
-     }
+    { scanf("%d",&a[i]);
+      {if(min>a[i])
+     min=a[i];}}
      for(i=min;i>=1;i--)
      {
           found=0;
