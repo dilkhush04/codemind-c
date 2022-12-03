@@ -1,40 +1,32 @@
 #include<stdio.h>
+int pro(int n)
+{
+    if(n==1)
+    return 0;
+    for(int i=2;i<=n/2;i++)
+    {
+        if(n%i==0)
+        {
+            return 0;
+        }
+    }
+    return n;
+}
 int main()
 {
-    int i,j,n,k=0,a[100],d=0;
+    int n;
     scanf("%d",&n);
-    for(i=2;i<n;i++)
+    for(int i=1;i<=n;i++)
     {
-       int flag=0;
-       for(j=2;j<=i/2;j++)
-       {
-           if(i%j==0)
-           {
-               flag=1;
-           }
-       }
-       if(flag==0)
-       {
-           
-           a[k]=i;
-           k++;
-           
-       }
-    }
-    for(i=0;i<k;i++)
-    {
-        for(j=i+1;j<k;j++)
+        for(int j=i+1;j<=n;j++)
         {
-            if(a[i]*a[j]==n)
+            if(pro(i)*pro(j)==n)
             {
-                printf("%d %d",a[i],a[j]);
-                d++;
-                break;
+                printf("%d %d",i,j);
+                return 0;
             }
         }
     }
-    if(d==0)
-    {
-        printf("-1");
-    }
+    printf("-1");
+    return 0;
 }
