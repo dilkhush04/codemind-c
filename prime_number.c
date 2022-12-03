@@ -19,21 +19,32 @@ int main()
         if (num % i == 0)
 
         {
+
             temp=1;
 
             break;
+
         }
 
     } 
+
+
     if (temp==0)
 
     {
+
         printf("prime");
+
     }
+
     else
+
     {
+
         printf("not a prime");
+
     }
+
     return 0;
 
 }
